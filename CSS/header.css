@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=New+Rocker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Coding By Sukamal Manna */
+
+header {
+    width: 100%;
+    background: linear-gradient(to right, #2d0b00, #00093c);
+    position: relative;
+    /* color: #fff; */
+    /* font-size: 16px; */
+    padding: 15px 10px;
+    /* border-bottom-right-radius: 100px; */
+    border-bottom-left-radius: 100px;
+    /* border-top-right-radius: 100px; */
+    /* border-top-left-radius: 100px; */
+}
+
+.row_header {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* .col_header {
+    flex-basis: auto;
+} */
+
+
+.logo_header {
+    width: 150px;
+    /* margin-right: 25px; */
+    cursor: pointer;
+}
+
+.menu{
+    position: fixed;
+    top: 63.75px;
+    left: -100%;
+    display: block;
+    padding: 100px 50px;
+    text-align: center;
+    width: 60%;
+    height: 100vh;
+    /* background: #fff; */
+    background: linear-gradient(to right, #2d0b00, #00093c);
+    border-top-left-radius: 80px;
+    transition: 0.5s;
+    z-index: 999;
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.menu.active{
+    left: 0;
+}
+header ul{
+    list-style: none;
+}
+.menuBx{
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.menuBx:hover{
+    color: #05aff8;
+}
+.row_header .toggle{
+    position: relative;
+    width: 36px;
+    height: 28px;
+    background: url(../IMAGES/toggle.png); 
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+}
+.toggle.active{
+    background: url(../IMAGES/close.png); 
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    cursor: pointer;
+}

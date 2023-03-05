@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=New+Rocker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* Coding by Sukamal Manna */
+.body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background: #222;
+    
+}
+
+.body::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(#08ff12, #0791ff);
+    z-index: 10;
+    mix-blend-mode: multiply;
+}
+
+.clock{
+    position: relative;
+    width: 325px;
+    height: 325px;
+    background: rgba(255,255,255,0.05); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #fff5,0 0 0 20px #333,0 0 0 22px #fff,0 0 450px #fff;
+}
+
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #e91e6200;
+    border-radius: 50%;
+    z-index: 10000;
+    /* box-shadow: 0 0 0 1px #e91e63, 0 0 0 3px #fff, 0 0 5px 5px rgba(0, 0, 0, 0.15); */
+}
+
+.clock .numbers{
+    position: absolute;
+    inset: 10px;
+    
+
+}
+
+
+.clock .numbers span{
+    position: absolute;
+    inset: 1px;
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock .numbers span b{
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
+.clock .numbers .circle{
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    /* mix-blend-mode:soft-light; */
+    
+    
+}
+
+
+
+.clock .numbers .circle i{
+    position: absolute;
+    width: 3px;
+    height: 50%;
+    /* background: #fff; */
+    /* background: linear-gradient(0deg, transparent, #ffffff9e); */
+    background: linear-gradient(0deg, transparent, #02f923);
+
+    transform-origin: bottom;
+    
+
+    
+}
+
+
+.clock .numbers .circle#hr i{
+    transform: scaleY(0.3);
+    width: 4px;
+    
+    
+}
+.clock .numbers .circle#mn i{
+    transform: scaleY(0.45);
+    width: 3px;
+}
+.clock .numbers .circle#sc i{
+    transform: scaleY(0.6);
+    width: 2px;
+    
+}
+
+
+
+
+
+
